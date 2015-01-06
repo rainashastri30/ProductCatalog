@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Ecommerce Catalog</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.js"></script>
+    
+	
+  </head>
+  <body ng-app="EcommCatalog">
+  <script type="text/ng-template" id='/home1.html'>
+		<h1>Welcome</h1>
+	   <li><a href="#/store/car">cars </li>  
+	   <br><br>
+	   <li><a href="#/store/tv">TV </li>
+	   <br><br>
+	   <li><a href="#/store/nailPolish">Nail polish</li>
+   </script>
+  	
+	
+	<script type="text/ng-template" id='/cars.html'>
+	<align="centre"><B>CARS</B></align> 
+	<br><br>
+	<li><a href="#/store/car/car1">car 1</li>
+	<br><br>
+	<br><br>
+	<li><a href="#/store/car/car2">car 2 </li>
+	<br><br>
+	<br><br>
+	<li><a href="#/store/car/car3">car 3</li>
+	<br><br>
+	<br><br>
+    <li><a href="#/store/car/car4">car 4 </li>
+	</script>
+	
+	<script type="text/ng-template" id='/carsInfo.html'>
+   <div ng-repeat="car in cars">
+	{{car}}
+	</div>
+   </script>
+   
+   <script type="text/ng-template" id='/tv.html'>
+   <align="centre"><B> TV </B></align> 
+   <br><br>
+   <li><a href="/store/tv/tv1">TV1 </li>
+   <br><br>
+   <li><a href="/store/tv/tv2">TV2 </li>
+   <br><br>
+   <li><a href="/store/tv/tv3">TV3 </li>
+   <br><br>
+    <li><a href="/store/tv/tv4">TV4 </li>
+	</script>
+	
+	<script type="text/ng-template" id='/tvInfo.html'>
+   <div ng-repeat="tv in tvs">
+	{{tv}}
+	</div>
+	</script>
+	
+	<script type="text/ng-template" id='/nailPolish.html'>
+   <align="centre"><B> Nail Polish </B></align> 
+   <br><br>
+   <li><a href="/store/np/nailPolish1">NP1 </li>
+   <br><br>
+   <li><a href="/store/np/nailPolish2">NP1 </li>
+   <br><br>
+   <li><a href="/store/np/nailPolish3">NP1 </li>
+   <br><br>
+    <li><a href="/store/np/nailPolish4">NP1 </li>
+	</script>
+	
+	<script type="text/ng-template" id='/nailPolishInfo.html'>
+	<div ng-repeat="np in nailPolish">
+	{{np}}
+	</div>
+	</script>
+	
+  	<div ng-view></div>
+   
+  </body>
+</html>

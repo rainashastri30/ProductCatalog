@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <title>Ecommerce Catalog</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.js"></script>
+    <script src="/javascripts/angularApp.js"></script>
+	
+	
+	<style>
+	#header{
+	background-color:Black;
+    color:white;
+    text-align:center;
+    padding:5px;
+	}
+	
+	#section {
+    width:350px;
+    float:left;
+    padding:10px;	 
+	font-size: 20px;	
+	font-family: "Lucida Console", Times, Monospaced;
+	
+}
+	#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:500px;
+    width:200px;
+    float:left;
+    padding:5px;
+	font-size: 20px;	
+	font-family: "Lucida Sans Typewriter", Times, Monospaced;
+	
+}
+
+
+	a:link{
+	
+	text-decoration: none;
+	}
+	
+	
+	#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:100px;	 	 
+}
+	</style>
+  </head>
+
+  <body ng-app="EcommCatalog">
+  
+  
+<frameset cols="25%,*>
+</frameset>
+
+
+  
+  <script type="text/ng-template" id='/home1.html'>
+    <div id="header">
+		<h1>BAG IT!!!</h1><br/><br/>
+		<h1><a ng-href="http://localhost:8080/user/login"> Sign In </a></h1>
+		</div>
+		<div id="nav">
+		<br><br>
+	   <li><a href="#/store/car">Cars</a></li>  
+	   <br/><br/>
+	   <li><a href="#/store/tv">TV</a> </li>
+	   <br/><br/>
+	   <li><a href="#/store/nailPolish">Nail polish</a></li>
+	   </div>
+	   <img src="/javascripts/welcome.jpg" align="right"/>
+	   
+   </script>
+	
+	
+	
+	
+	<script type="text/ng-template" id='/cars.html'>
+	
+	<div id="section">
+	
+	<br><br>
+	<B>CARS</B><br><br>
+	<li>{{carsdata[0].model}}<br><br>
+	<img src="{{carsdata[0].img}}" height="500" width="600"/>
+	</li><br><br>
+	<a ng-href="http://localhost:8080/home/cars/{{carsdata[0]._id}}">Buy Now</a>
+	
+	<li>{{carsdata[1].model}}<br><br>
+	<img src="{{carsdata[1].img}}" height="500" width="600"/>
+	</li><br><br>
+	<a ng-href="http://localhost:8080/home/cars/{{carsdata[1]._id}}">Buy Now</a>
+	
+	<li>{{carsdata[2].model}}<br><br>
+	<img src="{{carsdata[2].img}}" height="500" width="600"/>
+	</li><br><br>
+	<a ng-href="http://localhost:8080/home/cars/{{carsdata[2]._id}}">Buy Now</a>
+	
+	<li>{{carsdata[3].model}}<br><br>
+	<img src="{{carsdata[3].img}}" height="500" width="600"/>
+	</li><br><br>
+	<a ng-href="http://localhost:8080/home/cars/{{carsdata[3]._id}}">Buy Now</a>
+	<br><br>
+	<a href="#/store/">Go Back to home</a><br><br>
+	</div>
+	</script>
+
+	
+  
+   
+   
+    
+    <script type="text/ng-template" id='/tv.html'>
+    <div id="section">
+	<br><br>
+	<align="centre"><B> TV </B></align><br><br>
+	<li>{{tvList[0].brand}}<br><br>
+	<img src="{{tvList[0].img}}" height="500" width="600"/>
+	</li><br><br>
+	<a ng-href="http://localhost:8080/home/tvs/{{tvList[0]._id}}">Buy Now</a>
+	
+	<li>{{tvList[1].brand}}<br><br>
+	<img src="{{tvList[1].img}}" height="500" width="600"/>
+	</li><br><br>
+	<a ng-href="http://localhost:8080/home/tvs/{{tvList[1]._id}}">Buy Now</a>
+	
+	<li>{{tvList[2].brand}}<br><br>
+	<img src="{{tvList[2].img}}" height="500" width="600"/>
+	</li><br><br>
+	<a ng-href="http://localhost:8080/home/tvs/{{tvList[2]._id}}">Buy Now</a>
+	
+	<li>{{tvList[3].brand}}<br><br>
+	<img src="{{tvList[3].img}}" height="500" width="600"/>
+	</li><br><br>
+	<a ng-href="http://localhost:8080/home/tvs/{{tvList[3]._id}}">Buy Now</a>
+	<br><br>
+	<a href="#/store/">Go Back to home</a><br><br>
+	</div>
+	</script>
+	
+	
+	
+	
+	
+	<script type="text/ng-template" id='/nailPolish.html'>
+	<div id="section">
+	<br><br>
+	<B>Nail Polish</B><br><br>
+	<li>{{npList[0].brand}}<br><br>
+	<img src="{{npList[0].img}}" height="500" width="600"/>
+	</li><br><br> 
+	<a ng-href="http://localhost:8080/home/nps/{{npList[0]._id}}">Buy Now</a>
+	
+	<li>{{npList[1].brand}}<br><br>
+	<img src="{{npList[1].img}}" height="500" width="600"/>
+	</li><br><br> 
+	<a ng-href="http://localhost:8080/home/nps/{{npList[1]._id}}">Buy Now</a>
+	
+	<li>{{npList[2].brand}}<br><br>
+	<img src="{{npList[2].img}}" height="500" width="600"/>
+	</li><br><br> 
+	<a ng-href="http://localhost:8080/home/nps/{{npList[2]._id}}">Buy Now</a>
+	
+	<li>{{npList[3].brand}}<br><br>
+	<img src="{{npList[3].img}}" height="500" width="600"/>
+	</li><br><br> 
+	<a ng-href="http://localhost:8080/home/nps/{{npList[3]._id}}">Buy Now</a>
+	<br><br>
+	<a href="#/store/">Go Back to home</a><br><br>
+	</div>
+	</script>
+	
+	
+	
+	
+	
+	
+  	<div ng-view></div>
+	
+	
+	<div id="footer"></div>
+	
+   
+  </body>
+</html>
